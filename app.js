@@ -107,7 +107,7 @@ app.get("/secrets" , (req,res)=>{
     
     User.find({"secret" : {$ne: null}}).then(foundUsers=>{
       if(foundUsers){
-        res.render("secrets" , {usersWithSecret: foundUsers})
+        res.render("secrets" , {usersWithSecrets: foundUsers})
       }
     })
 })
